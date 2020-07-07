@@ -20,7 +20,7 @@ run `rails db:setup`
 
 ### Auto-generate the backend resource chain
 
-run `rails g resource user` (replace with the plural of the model name), it will generate the following files for you:
+run `rails g resource user`  or `rails g resource api/user` (for api resource) (replace with the plural of the model name), it will generate the following files for you:
 
 - DB migration file
 - model
