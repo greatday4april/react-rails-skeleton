@@ -12,7 +12,7 @@ fork the repository and clone to your computer.
 
 run `gem update --system`
 
-run `bundle install && yarn install`
+cd into the folder and run `bundle install && yarn install`
 
 ### DB setup
 
