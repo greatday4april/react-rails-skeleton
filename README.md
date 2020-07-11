@@ -43,6 +43,9 @@ run `rails g resource user`  or `rails g resource api/user` (for api resource) (
 
 - You will need to use `yarn add` `yarn run` etc instead of `npm`
 
+
+### Server rendering and automatic reloading
+
 ## \* Instructions to build this skeleton on your own (as you may have issue reusing this skeleton)
 
 1. `rails new PROJECT_NAME -BT --webpack=react --database=postgresql` (or you could use default option sqlite3) (dont worry about the yello warnings)
