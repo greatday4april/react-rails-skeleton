@@ -20,7 +20,7 @@ run `rails db:setup`
 
 ### Auto-generate the backend resource chain
 
-run `rails g resource api/user` (for api resource) (replace with your model name), it will generate the following files for you:
+run `rails g resource api/user -j=false -y=false --skip-template-engine --no-helper` (for pure api resource) (replace `api/user` with your model name), it will generate the following files for you:
 
 - DB migration file
 - model
@@ -38,7 +38,8 @@ run `rails g resource api/user` (for api resource) (replace with your model name
 
 - run `rails g react:component Users users:array` based on react component name and props it takes. reference: https://github.com/reactjs/react-rails#component-generator
 - add `Route` to `app.jsx` for your new top-level component
-- `yarn add react-redux redux redux-logger redux-thunk` if you need redux
+- `yarn add react-redux redux redux-logger redux-thunk` if you need redux, and add provider to `root.jsx`
+- https://github.com/instacart/redux-rails and https://github.com/instacart/redux-rails-resource are two interesting packages that writes async action, reducers and containers for you so you can save a lot of boilerplate code
 
 ### Run server
 - run `rails s` and it will load webpack as well, supports auto-reloading when there's code change
@@ -51,11 +52,10 @@ run `rails g resource api/user` (for api resource) (replace with your model name
 4. `yarn upgrade @rails/webpacker`
 5. `rails g react:install`
 6. `bundle add faker`
-7. `rails db:create`
-8. `rails g controller static_pages root`
-9. add `<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">` `<%= javascript_pack_tag 'root' %>` to application.html.erb
-10. rename `hello_react.jsx` to `root.jsx`
-11. add `root "static_pages#root"` to routes.rb
+7. `rails g controller static_pages root`
+8. add `<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">` `<%= javascript_pack_tag 'root' %>` to application.html.erb
+9. rename `hello_react.jsx` to `root.jsx`
+10. add `root "static_pages#root"` to routes.rb
 11. `git add . && git commit -m "initial skeleton"`
 
 [reference]

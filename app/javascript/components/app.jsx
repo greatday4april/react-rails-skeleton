@@ -4,9 +4,11 @@ import React from "react";
 
 const App = () => (
   <div>
-    <header>
-      <h1>My App</h1>
-    </header>
+    <h1>
+      <a href="https://github.com/greatday4april/react-rails-skeleton/blob/master/README.md">
+        README
+      </a>
+    </h1>
     {/* <Switch>
       <AuthRoute exact path="/login" component={} />
       <AuthRoute exact path="/signup" component={} />
