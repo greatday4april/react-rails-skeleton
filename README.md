@@ -53,11 +53,11 @@ run `rails g resource api/user` (for api resource) (replace with your model name
 6. `bundle add faker`
 7. `rails db:create`
 8. `rails g controller static_pages root`
-9. add `<%= javascript_pack_tag 'root', 'data-turbolinks-track': 'reload' %>` to application.html.erb
+9. add `<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">` `<%= javascript_pack_tag 'root' %>` to application.html.erb
 10. rename `hello_react.jsx` to `root.jsx`
 11. add `root "static_pages#root"` to routes.rb
 11. `git add . && git commit -m "initial skeleton"`
 
-reference:
+[reference]
 
-https://medium.com/swlh/getting-started-with-rails-6-and-react-afac8255aecd
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-ruby-on-rails-project-with-a-react-frontend
