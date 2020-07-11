@@ -39,6 +39,10 @@ run `rails g resource user`  or `rails g resource api/user` (for api resource) (
 - run `rails g react:component Users users:array` based on react component name and props it takes. reference: https://github.com/reactjs/react-rails#component-generator
 - Add `render 'component': 'Users', props: { users: @users }` to your controller action, for example `Users#index`. see https://github.com/reactjs/react-rails#controller-actions (you can also use `respond_to` along with it if you respond to multiple formats)
 
+### Use `yarn` instead of `npm`
+
+- You will need to use `yarn add` `yarn run` etc instead of `npm`
+
 ## \* Instructions to build this skeleton on your own (as you may have issue reusing this skeleton)
 
 1. `rails new PROJECT_NAME -BT --webpack=react --database=postgresql` (or you could use default option sqlite3) (dont worry about the yello warnings)
