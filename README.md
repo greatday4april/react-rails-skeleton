@@ -18,14 +18,16 @@
 
 run `rails db:setup`
 
-### Auto-generate the backend resource chain
+### Create the backend resource chain
 
-run `rails g resource api/user -j=false -y=false --skip-template-engine --no-helper` (for pure api resource) (replace `api/user` with your model name), it will generate the following files for you:
+run `rails g model user && rails g scaffold_controller api/user --api` (for pure api resource) (replace `api/user` with your model name), it will generate the following files for you:
 
 - DB migration file
 - model
 - controller
-- standard route
+- jbuider views
+
+You would still need to add `resource :users` to routes.rb
 
 ### Backend implementation
 
@@ -52,11 +54,13 @@ run `rails g resource api/user -j=false -y=false --skip-template-engine --no-hel
 4. `yarn upgrade @rails/webpacker`
 5. `rails g react:install`
 6. `bundle add faker`
-7. `rails g controller static_pages root`
-8. add `<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">` `<%= javascript_pack_tag 'root' %>` to application.html.erb
-9. rename `hello_react.jsx` to `root.jsx`
-10. add `root "static_pages#root"` to routes.rb
-11. `git add . && git commit -m "initial skeleton"`
+7. `bundle add solargraph --group "development"`
+8. `rails g controller static_pages root`
+9. add `<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">` `<%= javascript_pack_tag 'root' %>` to application.html.erb
+10. rename `hello_react.jsx` to `root.jsx`
+11. add `root "static_pages#root"` to routes.rb
+12. add this file to root directory if you use solargraph for rails auto-completion: https://gist.github.com/castwide/28b349566a223dfb439a337aea29713e
+13. `git add . && git commit -m "initial skeleton"`
 
 [reference]
 
