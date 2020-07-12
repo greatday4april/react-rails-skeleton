@@ -41,7 +41,7 @@ You would still need to add `resource :users` to routes.rb
 - run `rails g react:component Users users:array` based on react component name and props it takes. reference: https://github.com/reactjs/react-rails#component-generator
 - add `Route` to `app.jsx` for your new top-level component
 - `yarn add react-redux redux redux-logger redux-thunk` if you need redux, and add provider to `root.jsx`
-- https://github.com/instacart/redux-rails and https://github.com/instacart/redux-rails-resource are two interesting packages that writes async action, reducers and containers for you so you can save a lot of boilerplate code
+- https://github.com/instacart/redux-rails is one interesting package that helps you write async action, reducers and containers for redux-rails integration so you can save a lot of boilerplate code
 
 ### Run server
 - run `rails s` and it will load webpack as well, supports auto-reloading when there's code change
@@ -63,5 +63,7 @@ You would still need to add `resource :users` to routes.rb
 13. `git add . && git commit -m "initial skeleton"`
 
 [reference]
+
+https://medium.com/swlh/getting-started-with-rails-6-and-react-afac8255aecd
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-ruby-on-rails-project-with-a-react-frontend
