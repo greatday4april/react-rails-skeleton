@@ -48,7 +48,7 @@ You would still need to add `resource :users` to routes.rb
 
 ## * Instructions to build this skeleton on your own (as you may have issue reusing this skeleton)
 
-1. `rails new PROJECT_NAME -BT --webpack=react --database=postgresql` (or you could use default option sqlite3) (dont worry about the yello warnings)
+1. `rails new PROJECT_NAME -BT --webpack=react --database=postgresql --skip-turbolinks=true` (or you could use default option sqlite3) (dont worry about the yello warnings)
 2. cd into the folder and `bundle add react-rails`
 3. `yarn add webpack react-router-dom`
 4. `yarn upgrade @rails/webpacker`
