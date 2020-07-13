@@ -40,6 +40,7 @@ You would still need to add `resource :users` to routes.rb
 
 - run `rails g react:component Users users:array` based on react component name and props it takes. reference: https://github.com/reactjs/react-rails#component-generator
 - add `Route` to `app.jsx` for your new top-level component
+- you may not need jquery as you could use [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) with a similar syntax
 - `yarn add react-redux redux redux-logger redux-thunk` if you need redux, and add provider to `root.jsx`
 - https://github.com/instacart/redux-rails is one interesting package that helps you write async action, reducers and containers for redux-rails integration so you can save a lot of boilerplate code
 
@@ -54,7 +55,7 @@ You would still need to add `resource :users` to routes.rb
 4. `yarn upgrade @rails/webpacker`
 5. `rails g react:install`
 6. `bundle add faker`
-7. `bundle add solargraph --group "development"`
+7. `bundle add solargraph pry-rails --group "development"`
 8. `rails g controller static_pages root`
 9. add `<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">` `<%= javascript_pack_tag 'root' %>` to application.html.erb
 10. rename `hello_react.jsx` to `root.jsx`
