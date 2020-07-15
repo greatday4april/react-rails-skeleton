@@ -13,6 +13,7 @@
 - cd into the folder and run `bundle install && yarn install`
 - We will use `yarn` instead of `npm` so `yarn add` `yarn run` etc instead of `npm`
 - you may need turn off "Auto Attach" in the bottom bar of VS code if you have it
+- Feel free to use the example https://github.com/greatday4april/react-rails-redux-example as a reference if you do decide to use redux 
 
 ### DB setup
 
@@ -42,7 +43,6 @@ You would still need to add `resource :users` to routes.rb
 - add `Route` to `app.jsx` for your new top-level component
 - you may not need jquery as you could use [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) with a similar syntax
 - `yarn add react-redux redux redux-logger redux-thunk` if you need redux, and add provider to `root.jsx`
-- https://github.com/instacart/redux-rails is one interesting package that helps you write async action, reducers and containers for redux-rails integration so you can save a lot of boilerplate code
 
 ### Run server
 - run `rails s` and it will load webpack as well, supports auto-reloading when there's code change
